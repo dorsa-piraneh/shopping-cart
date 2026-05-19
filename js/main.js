@@ -77,7 +77,7 @@ const searchProduct = () => {
   const searchedValue = serachInput.value.toLowerCase().trim();
 
   const filteredProducts = products.filter((product) => {
-    return product['title-fa'].includes(searchedValue) || product['title-en'].toLowerCase().includes(searchedValue);
+    return product.titleFa.includes(searchedValue) || product.titleEn.toLowerCase().includes(searchedValue);
   });
 
   renderProducts(filteredProducts);
@@ -250,14 +250,14 @@ const addToCart = (productId, event) => {
       count: 1,
     };
     cartProducts.push(newProduct);
-    // showSuccessAlert('اضافه شد', 'کالا با موفقیت به سبد خرید شما افزوده شد.');
+    showSuccessAlert('اضافه شد', 'کالا با موفقیت به سبد خرید شما افزوده شد.');
   } else {
     const existingProduct = cartProducts.find((product) => product.id == productId);
     if (existingProduct.count < existingProduct.orderLimit) {
       existingProduct.count++;
-      // showSuccessAlert('سبد خرید به‌روزرسانی شد', 'تعداد کالا در سبد خرید با موفقیت افزایش یافت.');
+      showSuccessAlert('سبد خرید به‌روزرسانی شد', 'تعداد کالا در سبد خرید با موفقیت افزایش یافت.');
     } else {
-      // showErrorAlert('محدودیت تعداد', `امکان خرید بیشتر از ${existingProduct.orderLimit} عدد از این کالا وجود ندارد.`);
+      showErrorAlert('محدودیت تعداد', `امکان خرید بیشتر از ${existingProduct.orderLimit} عدد از این کالا وجود ندارد.`);
     }
   }
   updateCart();
