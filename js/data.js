@@ -56,7 +56,7 @@ const products = [
     price: 1_980_000,
     discount: 0,
     stock: 5,
-    orderLimit: 2,
+    orderLimit: 4,
     rating: 4.5,
     details: {
       colors: ['سفیذ', 'سرمه ای', 'مشکی'],
@@ -86,8 +86,8 @@ const products = [
     imageSrc: './assets/images/products-image/06.webp',
     price: 40_500_000,
     discount: 5,
-    stock: 1,
-    orderLimit: 1,
+    stock: 10,
+    orderLimit: 4,
     rating: 4.6,
     details: {
       colors: ['سفید'],
@@ -184,7 +184,7 @@ const products = [
     price: 6_800_000,
     discount: 10,
     stock: 2,
-    orderLimit: 1,
+    orderLimit: 2,
     rating: 4.1,
     details: {
       colors: ['سفید', 'مشکی', 'سرمه ای'],
